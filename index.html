@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Cobra Snake</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="homeScreen" class="screen home-screen">
+        <h1>King Cobra Snake</h1>
+        <p class="instructions">How to play</p>
+        <ul class="how-to-play">
+          <li>Use the arrow keys to move the cobra.</li>
+          <li>Eat apples to grow and increase your score.</li>
+          <li>Avoid walls and your own body.</li>
+        </ul>
+        <div class="menu-actions">
+          <button id="startBtn" type="button">Start Game</button>
+          <button id="speedBtn" type="button">Speed: x1.0</button>
+        </div>
+        <p class="speed-note">Each click adds +0.5 speed up to x6.0, then resets to x1.0.</p>
+      </section>
+
+      <section id="gameScreen" class="screen game-screen hidden">
+        <div class="top-row">
+          <h2>King Cobra Snake</h2>
+          <button id="homeBtn" type="button">Home</button>
+        </div>
+        <canvas id="gameCanvas" width="800" height="800" aria-label="Snake game board"></canvas>
+        <div class="hud">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Speed: <strong id="speedLabel">x1.0</strong></span>
+          <button id="restartBtn" type="button">Restart</button>
+        </div>
+        <p id="status" class="status"></p>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
